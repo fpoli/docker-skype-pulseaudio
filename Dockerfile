@@ -38,7 +38,7 @@ RUN chown -R docker:docker /home/docker/.ssh
 
 # Set locale (fix locale warnings)
 RUN localedef -v -c -i en_US -f UTF-8 en_US.UTF-8 || true
-RUN echo "Europe/Prague" > /etc/timezone
+RUN echo "Europe/Rome" > /etc/timezone
 
 # Set up the launch wrapper - sets up PulseAudio to work correctly
 RUN echo 'export PULSE_SERVER="tcp:localhost:64713"' >> /usr/local/bin/skype-pulseaudio
